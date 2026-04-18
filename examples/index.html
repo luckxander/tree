@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree maker 🌳</title>
+    <link rel="stylesheet" href="../build/main.css">
+    <script type="text/javascript" src="../build/tree-maker.js"></script>
+</head>
+<body>
+<div id="my_tree"></div>
+<script type="text/javascript">
+    const nestedTree = {
+        10: '',
+        11: '',
+        12: '',
+        13: '',
+        14: '',
+        15: '',
+        16: '',
+        17: '',
+        18: '',
+        19: '',
+        20: '',
+        21: '',
+    }
+
+    const tree = {
+        // No node 1 está o nome da família
+        1: {
+            2:{
+                3:{
+                    4: '',
+                    5: '',
+                    6: {9: nestedTree}, // Francisco Bernardino de Senna Sobrinho
+                    7: '',
+                    8: ''
+                 }
+            },
+        },
+    };
+
+    const params = {
+        1: {trad: 'Senna/Sena'},
+        2: {trad: 'José Bernardino de Sena'},
+        3: {trad: 'Constância Angélica da Silveira'},
+        4: {trad: 'Ambrosina Angélica da Silveira'},
+        5: {trad: 'Bernardino'},
+        6: {trad: 'Francisco Bernardino de Senna Sobrinho'},
+        7: {trad: 'Guilhermina Constância da Silveira'},
+        8: {trad: 'Joaquim Bernardino de Senna'},
+        9: {trad: 'Mariana Ferreira Diniz'},
+        10: {trad: 'Adalgisa Ferreira Diniz'},
+        11: {trad: 'Adalgiso Bernardino de Senna'},
+        12: {trad: 'Arlindo Bernardino de Senna'},
+        13: {trad: 'Aristides Bernardino de Senna'},
+        14: {trad: 'Artur Bernardino de Senna'},
+        15: {trad: 'Bernardino José de Senna'},
+        16: {trad: 'Elvira Ferreira Diniz'},
+        17: {trad: 'Francisco Bernardino de Senna'},
+        18: {trad: 'João Bernardino de Senna'},
+        19: {trad: 'Josefina Ferreira de Senna Diniz'},
+        20: {trad: 'Maria Ferreira Diniz'},
+        21: {trad: 'Mariano Bernardino de Senna'},
+
+    };
+
+    treeMaker.default(tree, {
+        id: 'my_tree',
+        card_click: function (element) {
+            console.log(element);
+        },
+        treeParams: params,
+        link_width: '4px',
+        link_color: '#2199e8',
+    });
+</script>
+</body>
+</html>
